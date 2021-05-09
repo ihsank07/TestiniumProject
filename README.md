@@ -1,4 +1,4 @@
 # selenium-test
 Selenium project for Testinium Company
 
-Java, Selenium, Junit used 
+Java,Maven, Selenium, Junit,Log4J used
