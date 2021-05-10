@@ -1,6 +1,8 @@
 # TestiniumProject
-Selenium project for Testinium Company
+Testinium şirketi için Selenium projesi olarak yapıldı
 
-Java,Maven, Selenium, Junit,Log4J are used
+Java,Maven, Selenium, Junit,Log4J teknolojileri kullanıldı.
+
+
 
 
