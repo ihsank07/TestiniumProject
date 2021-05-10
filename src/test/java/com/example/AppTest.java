@@ -5,6 +5,9 @@ package com.example;
 import java.util.List;
 import java.util.Random;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.message.LoggerNameAwareMessage;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -14,8 +17,10 @@ import org.openqa.selenium.interactions.Actions;
 
 
 
+
 public class AppTest extends SetUp {
     
+	public static Logger Logger = LogManager.getLogger(AppTest.class);
 	public static final String url = "https://www.gittigidiyor.com/";
     public static final String loginurl = "https://www.gittigidiyor.com/uye-girisi";
     String ProductPriceString;
@@ -45,7 +50,9 @@ public class AppTest extends SetUp {
         driver.findElement(By.id("L-UserNameField")).sendKeys("denemetest11111@gmail.com");
         driver.findElement(By.id("L-PasswordField")).sendKeys("deneme1");
         driver.findElement(By.id("gg-login-enter")).click();
-        Thread.sleep(500000);
+        
+        
+        Thread.sleep(1000);//captcha devreye girerse uzat
         //loginkontrol
         boolean profile = driver.findElement(By.xpath("//div[contains(@title,'Hesabım')]")).isDisplayed();
         if(profile==true) {
